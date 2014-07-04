@@ -24,6 +24,8 @@ public class MainActivity extends ActionBarActivity {
     private String[] menuOptions;
     private ActionBarDrawerToggle drawerToggle;
 
+    private boolean draweropen;
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -67,8 +69,19 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        //open state to start with
-        drawerLayout.openDrawer(listView);
+        //check state drawer
+        if (savedInstanceState != null) {
+            boolean draweropen = savedInstanceState.getBoolean("drawerstate");
+            if (draweropen) {
+                drawerLayout.openDrawer(listView);
+            } else {
+                drawerLayout.closeDrawer(listView);
+            }
+        } else {
+            //open state to start with
+            drawerLayout.openDrawer(listView);
+        }
+
 
     }
 
@@ -95,5 +108,17 @@ public class MainActivity extends ActionBarActivity {
         fragmentTransaction.commit();
 
         drawerLayout.closeDrawer(listView);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (drawerLayout.isDrawerOpen(listView)) {
+            draweropen = true;
+        } else {
+            draweropen = false;
+        }
+        outState.putBoolean("drawerstate", draweropen);
+        super.onSaveInstanceState(outState);
+
     }
 }
