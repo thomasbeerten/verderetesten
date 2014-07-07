@@ -24,4 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
     compile files('libs/pixlui-1-0-5.jar')
+    compile project(':PanningViewLibrary')
+    compile files('libs/nineoldandroids-2.4.0.jar')
 }

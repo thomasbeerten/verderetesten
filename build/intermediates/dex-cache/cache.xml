@@ -2,22 +2,34 @@
 <pre-dex-items>
 
     <item
+        dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-ba8f97bd18b39aa22881129d821d08128854ea70.jar"
+        jar="C:\Users\zi04\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\classes-c05229bb207ddc0ec2d6e80b32d1a373702f638a.jar"
+        jar="C:\Users\zi04\AndroidStudioProjects\verderetesten\build\intermediates\exploded-aar\verderetesten\PanningViewLibrary\unspecified\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="776e08353f829646fb283ae319f9f0d27aaceb8c"/>
+    <item
         dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\classes-930b5624f7b3e74652bdd325594e85bc7749e22f.jar"
         jar="C:\Users\zi04\AndroidStudioProjects\verderetesten\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
     <item
+        dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-86520cacaad4b9d25c745660d9508e57ce9b5670.jar"
+        jar="C:\Users\zi04\AndroidStudioProjects\verderetesten\build\intermediates\exploded-aar\verderetesten\PanningViewLibrary\unspecified\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7"/>
+    <item
         dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\pixlui-1-0-5-917f4a42d6f8172ef3e9681c898767b6ca955e98.jar"
         jar="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\libs\pixlui-1-0-5.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="b42ea4a02c2464b2ad006ee0582c8d3608d433ca"/>
-    <item
-        dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-ba8f97bd18b39aa22881129d821d08128854ea70.jar"
-        jar="C:\Users\zi04\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
 
 </pre-dex-items>

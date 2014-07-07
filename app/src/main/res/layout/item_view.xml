@@ -6,7 +6,7 @@
     android:layout_marginTop="3dp"
     android:background="@drawable/menuitemselector"
     android:orientation="horizontal"
-    android:padding="3dp">
+    android:padding="0dp">
 
     <ImageView
         android:id="@+id/item_image"

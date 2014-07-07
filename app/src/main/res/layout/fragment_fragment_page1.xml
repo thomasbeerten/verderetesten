@@ -11,12 +11,19 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="9dp"
         android:text="FRAGMENT 1"
-        android:layout_gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         pixlui:typeface="TraceofRough.ttf" />
 
+    <com.fourmob.panningview.PanningView
+        android:id="@+id/panningView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebooklogo">
+
+    </com.fourmob.panningview.PanningView>
 
 
 </FrameLayout>
