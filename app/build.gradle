@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.thomascbeerten.verderetesten.app"
-        minSdkVersion 9
+        minSdkVersion 11
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"
@@ -23,4 +23,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
+    compile files('libs/pixlui-1-0-5.jar')
 }

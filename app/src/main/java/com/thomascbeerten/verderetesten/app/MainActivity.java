@@ -5,13 +5,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.view.menu.MenuView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,8 +26,15 @@ public class MainActivity extends ActionBarActivity {
     private ListView listView;
     private String[] menuOptions;
     private ActionBarDrawerToggle drawerToggle;
+    String actionbarTitle;
 
     private boolean draweropen;
+
+    private int[] menuItemImageArray = {
+            R.drawable.ic_facebook,
+            R.drawable.ic_linkedin,
+            R.drawable.ic_rss,
+    };
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -58,36 +68,61 @@ public class MainActivity extends ActionBarActivity {
         menuOptions = getResources().getStringArray(R.array.menuoptions);
 
         listView = (ListView) findViewById(R.id.drawerList);
-        listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menuOptions));
+        ArrayAdapter<String> adapter = new MyListAdapter();
+        listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 SelectItem(i);
                 Log.d("select item", String.valueOf(i));
-
-                Toast.makeText(getBaseContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
 
-        //check state drawer
+        //check state drawer //check title state
         if (savedInstanceState != null) {
+            //drawer
             boolean draweropen = savedInstanceState.getBoolean("drawerstate");
             if (draweropen) {
                 drawerLayout.openDrawer(listView);
             } else {
                 drawerLayout.closeDrawer(listView);
             }
+            //title
+            actionbarTitle = savedInstanceState.getString("actionbarTitle");
+            if (actionbarTitle != null) {
+                getActionBar().setTitle(actionbarTitle);
+            }
         } else {
             //open state to start with
             drawerLayout.openDrawer(listView);
         }
+    }
 
+    private class MyListAdapter extends ArrayAdapter<String> {
+        public MyListAdapter() {
+            super(MainActivity.this, R.layout.item_view, menuOptions);
+        }
 
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View itemView = convertView;
+            if (itemView == null) {
+                itemView = getLayoutInflater().inflate(R.layout.item_view, parent, false);
+            }
+            ImageView imageViewIcon = (ImageView) itemView.findViewById(R.id.item_image);
+            imageViewIcon.setImageResource(menuItemImageArray[position]);
+
+            TextView textViewMenuItem = (TextView) itemView.findViewById(R.id.item_menuitem);
+            textViewMenuItem.setText(menuOptions[position]);
+            return itemView;
+        }
     }
 
     private void SelectItem(int i) {
         listView.setItemChecked(i, true);
+        //settitle
         getSupportActionBar().setTitle(menuOptions[i]);
+        actionbarTitle = menuOptions[i];
         switch (i) {
             case 0:
                 ReplaceFragment(new FragmentPage1());
@@ -118,6 +153,10 @@ public class MainActivity extends ActionBarActivity {
             draweropen = false;
         }
         outState.putBoolean("drawerstate", draweropen);
+
+        if (actionbarTitle != null) {
+            outState.putString("actionbarTitle", actionbarTitle);
+        }
         super.onSaveInstanceState(outState);
 
     }

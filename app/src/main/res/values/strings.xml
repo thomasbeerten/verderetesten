@@ -6,9 +6,9 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="menuoptions">
-        <item>Page 1</item>
-        <item>Page 2</item>
-        <item>Page 3</item>
+        <item>Facebook</item>
+        <item>LinkedIn</item>
+        <item>RSS</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

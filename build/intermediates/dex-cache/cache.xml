@@ -8,6 +8,12 @@
         revision="19.1.0"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
     <item
+        dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\pixlui-1-0-5-917f4a42d6f8172ef3e9681c898767b6ca955e98.jar"
+        jar="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\libs\pixlui-1-0-5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b42ea4a02c2464b2ad006ee0582c8d3608d433ca"/>
+    <item
         dex="C:\Users\zi04\AndroidStudioProjects\verderetesten\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-ba8f97bd18b39aa22881129d821d08128854ea70.jar"
         jar="C:\Users\zi04\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
